@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+  <h1 class="text-titles text-center">{{event.title}}</h1>
+  <p class="text-center"><img src="{{ asset(event.image.url) }}"  style="width: 80%"/></p>
+  <p>{{event.content}}</p>
+</div>
+{% endblock %}
+

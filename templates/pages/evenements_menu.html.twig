@@ -1,0 +1,25 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="text-center">Menu Evênements</h2>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="/admin/liste-event">
+                    <button class="btn btn-primary">Liste</button>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="/admin/add-event">
+                    <button class="btn btn-primary">Ajouter</button>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="/admin/delete-event">
+                    <button class="btn btn-primary">Supprimer</button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

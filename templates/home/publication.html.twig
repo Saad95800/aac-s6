@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+  <h1 class="text-titles text-center">{{publication.title}}</h1>
+  <p class="text-center"><img src="{{ asset(publication.image.url) }}" style="width: 80%"/></p>
+  <div style="margin: 45px 10px;padding: 25px;background-color: #ffffff26;" class="publication-content">{{publication.content|raw}}</div>
+</div>
+{% endblock %}
+

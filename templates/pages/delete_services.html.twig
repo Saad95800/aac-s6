@@ -1,0 +1,29 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block body %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+        </div>
+    {% endfor %}
+
+    <div class="container">
+        <h2 class="text-center">Supprimer un service</h2>
+        <form method="post" action="/admin/service/delete">
+            <div class="form-group"></div>
+            <select class="custom-select" name="id_service">
+                {% for service in services %}
+                    <option value="{{service.id}}">{{service.name}}</option>
+                {% endfor %}
+            </select>
+            <div class="text-center" style="margin-top: 20px;">
+                <button type="submit" class="btn btn-danger">Supprimer</button>
+            </div>
+        </form>
+    </div>
+    
+
+{% endblock %}

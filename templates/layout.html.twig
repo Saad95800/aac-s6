@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block layout %}
+
+<img src="{{ asset('img/aac.jpg') }}" style="width:100%;" class="backgroung-img"/>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-aac">
+    
+    <a class="navbar-brand n-link" style="font-size:20px;" href="/">
+      <img src="{{ asset('img/logo-aac.png') }}" style="width:130px;"/>
+    </a>
+    <a class="navbar-brand n-link" style="text-shadow: none;" href="#"><p id="text-title-aac">Alternative<br/>Automotive<br/>Consulting</p></a>
+    <button class="navbar-toggler" id="button-navbar-toggle-aac" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mr-auto" id="navbarNav" style="justify-content: flex-end;">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link n-link" href="/#a-propos">AAC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link n-link" href="/#services">Prestations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link n-link" href="/#publications">Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link n-link" href="/#evenements">Evênements</a>
+        </li>
+        {# <li class="nav-item">
+          <a class="nav-link n-link" href="#">Blog</a>
+        </li> #}
+        <li class="nav-item">
+          <a class="nav-link n-link" href="/#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div style="min-height: 500px;padding-top: 30px;">
+  {% block body %}{% endblock %}
+</div>
+
+<footer class="footer">
+  <div class="row">
+    <div class="offset-md-2 col-sm-3 col-xs-5">
+      <div class="display-flex-center" style="height: 100%;">
+        <a class="navbar-brand n-link" style="text-shadow: none;" href="#"><p id="text-title-aac" style="font-size:30px;color:#ababab;"><span style="color:#acbcd0;">A</span>lternative<br/><span style="color:#acbcd0;">A</span>utomotive<br/><span style="color:#acbcd0;">C</span>onsulting</p></a>
+      </div>
+    </diV>
+    <div class="col-sm-3 col-xs-5">
+      <div class="display-flex-center text-content" style="height: 100%;flex-direction: column;align-items: flex-start;">
+        <p>INFORMATION</p>
+        <p><span class="text-titles" style="font-size:15px;">Tel:</span> +33 6 23 51 47 12</p>
+        <p><span class="text-titles" style="font-size:15px;">Email:</span> contact@aa-consulting.fr</p>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}

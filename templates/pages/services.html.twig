@@ -1,0 +1,29 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="text-center">Liste des services</h2>
+
+        <ul class="list-group">
+            {% for service in services %}
+                <a href="/admin/edit-service/{{ service.id }}" class="link-service"><li class="list-group-item service-item">{{ service.name }}</li></a>
+            {% endfor %}
+        </ul>
+
+    </div>
+    
+    <style>
+        .service-item{
+            background-color: #ffffff4d;
+        }
+        .service-item:hover{
+            background-color: #ffffffba;
+        }
+        .link-service{
+            color: black;
+        }
+        .link-service:hover{
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}

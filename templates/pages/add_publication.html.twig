@@ -1,0 +1,54 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block body %}
+
+<script src="{{ asset('trumbowyg/dist/trumbowyg.min.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('trumbowyg/dist/ui/trumbowyg.min.css') }}">
+
+{% for message in app.flashes('notice') %}
+    <div class="flash-notice">
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    </div>
+{% endfor %}
+
+<div class="container">
+{% set title = "Ajouter une publication" %}
+{% if type == 'event' %}
+    <h2 class="text-center">Ajouter un évênement</h2>
+{% else %}
+    <h2 class="text-center">Ajouter une Publication</h2>
+{% endif %}
+    
+
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div>
+        {{ form_row(form.title, { 'label': 'Titre' }) }}
+    </div>
+    <div>
+        {{ form_row(form.content, { 'label': 'Contenu' }) }}
+    </div>
+    <div>
+        {{ form_row(form.image) }}
+    </div>
+    <div class="text-center">
+        {{ form_row(form.type, { 'value': type }) }}
+    </div>
+    <div class="text-center">
+    {{ form_row(form.submit, { 'label': 'Enregistrer' }) }}
+    </div>
+{{ form_end(form) }}
+</div>
+    
+<script type="text/javascript">
+
+$('.trumbowyg').trumbowyg();
+$('.trumbowyg').css("background-color", "#fff");
+
+</script>
+{% endblock %}

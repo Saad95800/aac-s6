@@ -1,0 +1,95 @@
+@import "~bootstrap/scss/bootstrap";
+
+.footer{
+    background-color: #d6d6d6 !important;
+    min-height: 170px;
+    /* position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%; */
+  }
+  .text-content{
+      font-size: 15px;
+      font-weight: 500;
+      color: #6C6C6C !important;
+  }
+  .navbar-aac{
+      height: 120px;
+      background-color: #ffffff6e !important;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      z-index: 1;
+  }
+  .backgroung-img{
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+  }
+  #text-title-aac{
+      font-size: 20px;
+  }
+  html , body {
+  scroll-behavior: smooth;
+  }
+  body{
+    margin-top: 120px;
+  }
+  .main-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 56px;
+      min-height: 470px;
+  }
+  .text-titles{
+      font-size: 32px;
+      font-weight: 500;
+      color: #6C6C6C !important;
+      text-shadow: 1px 0 0 #E4E4E4, -1px 0 0 #E4E4E4, 0 1px 0 #E4E4E4, 0 -1px 0 #E4E4E4, 1px 1px #E4E4E4, -1px -1px 0 #E4E4E4, 1px -1px 0 #E4E4E4, -1px 1px 0 #E4E4E4;
+  }
+  .gradient{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-image: linear-gradient(#fff,transparent,transparent,transparent, #fff);
+  }
+  .n-link{
+      text-align: center;
+      color: #6C6C6C !important;
+      font-weight: bold;
+      font-size: 25px;
+      text-shadow: 2px 0 0 #E4E4E4, -2px 0 0 #E4E4E4, 0 2px 0 #E4E4E4, 0 -2px 0 #E4E4E4, 1px 1px #E4E4E4, -1px -1px 0 #E4E4E4, 1px -1px 0 #E4E4E4, -1px 1px 0 #E4E4E4;
+  }
+  .display-flex-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .publication-content p{
+    font-weight: 300 !important;
+  }
+
+  body{
+    background-color: #f3f5ff;
+  }
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    #navbarNav{
+      background-color: #fbfbfbeb !important;
+    }
+  }
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    #navbarNav{
+      background-color: #fbfbfbeb !important;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    #navbarNav{
+      background-color: #fbfbfbeb !important;
+    }
+  }

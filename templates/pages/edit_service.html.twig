@@ -1,0 +1,34 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block body %}
+
+{% for message in app.flashes('notice') %}
+    <div class="flash-notice">
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    </div>
+{% endfor %}
+
+<div class="container">
+    <h2 class="text-center">Modifier un service</h2>
+
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div>
+        {{ form_row(form.name, {'value': service.name}) }}
+    </div>
+    <div>
+        {{ form_row(form.image, {'value': service.image.url}) }}
+    </div>
+    <div class="text-center">
+    {{ form_row(form.submit, { 'label': 'Enregistrer' }) }}
+    </div>
+{{ form_end(form) }}
+</div>
+    
+
+{% endblock %}

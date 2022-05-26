@@ -1,0 +1,45 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block body %}
+
+<script src="{{ asset('trumbowyg/dist/trumbowyg.min.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('trumbowyg/dist/ui/trumbowyg.min.css') }}">
+
+{% for message in app.flashes('notice') %}
+    <div class="flash-notice">
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    </div>
+{% endfor %}
+
+<div class="container">
+    <h2 class="text-center">Modifier une publication</h2>
+
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div>
+        {{ form_row(form.title, {'value': publication.title, 'label': 'Titre' }) }}
+    </div>
+    <div>
+        {{ form_row(form.content, {'value': publication.content, 'label': 'Contenu' }) }}
+    </div>
+    <div>
+        {{ form_row(form.image, {'value': publication.image.url}) }}
+    </div>
+    <div class="text-center">
+    {{ form_row(form.submit, { 'label': 'Enregistrer' }) }}
+    </div>
+{{ form_end(form) }}
+</div>
+ 
+<script type="text/javascript">
+
+$('.trumbowyg').trumbowyg();
+$('.trumbowyg').css("background-color", "#fff");
+
+</script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="text-center">Liste des publications</h2>
+
+        <ul class="list-group">
+            {% for publication in publications %}
+                <a href="/admin/publication/edit/{{ publication.id }}" class="link-publication"><li class="list-group-item publication-item">{{ publication.title }}</li></a>
+            {% endfor %}
+        </ul>
+
+    </div>
+    
+    <style>
+        .publication-item{
+            background-color: #ffffff4d;
+        }
+        .publication-item:hover{
+            background-color: #ffffffba;
+        }
+        .link-publication{
+            color: black;
+        }
+        .link-publication:hover{
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}
